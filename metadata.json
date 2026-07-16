@@ -1,0 +1,6 @@
+{
+  "name": "Beauty Tips Website",
+  "description": "A premium beauty advice platform featuring custom advice, category explorations, complete auth, and a server-side AI Beauty Assistant powered by Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
