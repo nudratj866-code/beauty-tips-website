@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  
+  --color-brand-50: #FFF9F9;
+  --color-brand-100: #FFEFEF;
+  --color-brand-200: #FFD5D5;
+  --color-brand-300: #FFB3B3;
+  --color-brand-400: #FF8080;
+  --color-brand-500: #EC4899;
+  --color-brand-600: #DB2777;
+  --color-brand-700: #BE185D;
+  --color-brand-800: #9D174D;
+  --color-brand-900: #831843;
+  
+  --color-gold-50: #fdfbf7;
+  --color-gold-100: #fbf5e6;
+  --color-gold-200: #f5e4bd;
+  --color-gold-300: #ebd193;
+  --color-gold-400: #debb6b;
+  --color-gold-500: #cca044;
+  --color-gold-600: #b08235;
+  --color-gold-700: #8f652b;
+  --color-gold-800: #704d24;
+  --color-gold-900: #573b1d;
+}
+
+/* Base style smooth scroll and custom selections */
+html, body {
+  font-family: var(--font-sans);
+  background-color: #FFF9F9;
+  color: #4A3E3E;
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark {
+  background-color: #1A0F11;
+  color: #F3E8E8;
+}
+
+.dark html, .dark body {
+  background-color: #1A0F11;
+  color: #F3E8E8;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #1A0F11;
+}
+::-webkit-scrollbar-thumb {
+  background: #F472B6;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #9D174D;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #EC4899;
+}
+
+/* Custom utility for modern grid/bg */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+.dark .bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+}
+
+/* Class components or typography styling if needed */
+.serif-header {
+  font-family: var(--font-serif);
+}
+
+/* Soft shimmer animation for loading states */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.dark .animate-shimmer {
+  background: linear-gradient(90deg, #1c1917 25%, #292524 50%, #1c1917 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
